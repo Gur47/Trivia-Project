@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{deb9f1b1-297d-4837-85c4-e69ede118642}</ProjectGuid>
+    <RootNamespace>SERVER</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\FILES\Buffer.h" />
+    <ClInclude Include="..\FILES\Communicator.h" />
+    <ClInclude Include="..\FILES\CreateRoomRequest.h" />
+    <ClInclude Include="..\FILES\Game.h" />
+    <ClInclude Include="..\FILES\GameManager.h" />
+    <ClInclude Include="..\FILES\GameRequestHandler.h" />
+    <ClInclude Include="..\FILES\GetPlayersInRoomRequest.h" />
+    <ClInclude Include="..\FILES\IDatabase.h" />
+    <ClInclude Include="..\FILES\IRequestHandler.h" />
+    <ClInclude Include="..\FILES\JoinRoomRequest.h" />
+    <ClInclude Include="..\FILES\json.hpp" />
+    <ClInclude Include="..\FILES\JsonRequestPacketDeserializer.h" />
+    <ClInclude Include="..\FILES\JsonResponsePacketSerializer.h" />
+    <ClInclude Include="..\FILES\LoggedUser.h" />
+    <ClInclude Include="..\FILES\LoginManager.h" />
+    <ClInclude Include="..\FILES\LoginRequest.h" />
+    <ClInclude Include="..\FILES\LoginRequestHandler.h" />
+    <ClInclude Include="..\FILES\MenuRequestHandler.h" />
+    <ClInclude Include="..\FILES\Question.h" />
+    <ClInclude Include="..\FILES\RequestCodes.h" />
+    <ClInclude Include="..\FILES\RequestHandlerFactory.h" />
+    <ClInclude Include="..\FILES\RequestInfo.h" />
+    <ClInclude Include="..\FILES\RequestResult.h" />
+    <ClInclude Include="..\FILES\ResponseCodes.h" />
+    <ClInclude Include="..\FILES\Responses.h" />
+    <ClInclude Include="..\FILES\Room.h" />
+    <ClInclude Include="..\FILES\RoomAdminRequestHandler.h" />
+    <ClInclude Include="..\FILES\RoomData.h" />
+    <ClInclude Include="..\FILES\RoomManager.h" />
+    <ClInclude Include="..\FILES\RoomMemberRequestHandler.h" />
+    <ClInclude Include="..\FILES\Server.h" />
+    <ClInclude Include="..\FILES\SignupRequest.h" />
+    <ClInclude Include="..\FILES\sqlite3.h" />
+    <ClInclude Include="..\FILES\SqliteDatabase.h" />
+    <ClInclude Include="..\FILES\StatisticsManager.h" />
+    <ClInclude Include="..\FILES\StatisticsRequestHandler.h" />
+    <ClInclude Include="..\FILES\SubmitAnswerRequest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\FILES\Buffer.cpp" />
+    <ClCompile Include="..\FILES\Communicator.cpp" />
+    <ClCompile Include="..\FILES\Game.cpp" />
+    <ClCompile Include="..\FILES\GameManager.cpp" />
+    <ClCompile Include="..\FILES\GameRequestHandler.cpp" />
+    <ClCompile Include="..\FILES\JsonRequestPacketDeserializer.cpp" />
+    <ClCompile Include="..\FILES\JsonResponsePacketSerializer.cpp" />
+    <ClCompile Include="..\FILES\LoggedUser.cpp" />
+    <ClCompile Include="..\FILES\LoginManager.cpp" />
+    <ClCompile Include="..\FILES\LoginRequestHandler.cpp" />
+    <ClCompile Include="..\FILES\main.cpp" />
+    <ClCompile Include="..\FILES\MenuRequestHandler.cpp" />
+    <ClCompile Include="..\FILES\Question.cpp" />
+    <ClCompile Include="..\FILES\RequestHandlerFactory.cpp" />
+    <ClCompile Include="..\FILES\RequestInfo.cpp" />
+    <ClCompile Include="..\FILES\RequestResult.cpp" />
+    <ClCompile Include="..\FILES\Room.cpp" />
+    <ClCompile Include="..\FILES\RoomAdminRequestHandler.cpp" />
+    <ClCompile Include="..\FILES\RoomManager.cpp" />
+    <ClCompile Include="..\FILES\RoomMemberRequestHandler.cpp" />
+    <ClCompile Include="..\FILES\Server.cpp" />
+    <ClCompile Include="..\FILES\sqlite3.c" />
+    <ClCompile Include="..\FILES\SqliteDatabase.cpp" />
+    <ClCompile Include="..\FILES\StatisticsManager.cpp" />
+    <ClCompile Include="..\FILES\StatisticsRequestHandler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\FILES\Trivia.db" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp2.StatisticsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Statistics" Height="849" Width="700"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#1F2833">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+            <TextBlock Text="📊 Statistics Menu"
+                       FontSize="24"
+                       Foreground="#66FCF1"
+                       Margin="0,0,0,30"
+                       HorizontalAlignment="Center"/>
+            <Button Content="Personal Statistics"
+                    Click="PersonalStats_Click"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Width="250" Height="45" Margin="0,10"/>
+            <Button Content="General Statistics"
+                    Click="GeneralStats_Click"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Width="250" Height="45" Margin="0,10"/>
+            <Button Content="Back to Menu"
+                    Click="BackToMenu_Click"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Width="180" Height="45" Margin="0,30"/>
+        </StackPanel>
+
+        <ListView x:Name="StatsListView" Margin="30,312,30,39"
+                  Background="White" Foreground="Black"/>
+    </Grid>
+</Window>

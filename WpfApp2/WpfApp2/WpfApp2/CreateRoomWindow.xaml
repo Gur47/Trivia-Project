@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp2.CreateRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create Room" Height="400" Width="370">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
+
+        <TextBlock Text="Room Name:" />
+        <TextBox Name="RoomNameBox" Width="200" Margin="0,5"/>
+
+        <TextBlock Text="Max Players:" />
+        <TextBox Name="MaxPlayersBox" Width="200" Margin="0,5"/>
+
+        <TextBlock Text="Number of Questions:" />
+        <TextBox Name="NumQuestionsBox" Width="200" Margin="0,5"/>
+
+        <TextBlock Text="Answer Timeout (seconds):" />
+        <TextBox Name="TimeoutBox" Width="200" Margin="0,5"/>
+
+        <Button Content="Create Room" Width="200" Margin="0,15" Click="CreateRoom_Click"/>
+        <Button Content="Back" Width="200" Click="Back_Click"/>
+
+    </StackPanel>
+</Window>
